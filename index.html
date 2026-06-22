@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería del Taller Junkjournal</title>
+   <!--Link para abrir A-Frame-->
+   <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+   <!--Link para lectura de entornos o ambientes de A-Frame-->
+   <script src="https://unpkg.com/aframe-environment-component@1.5.x/dist/aframe-environment-component.min.js"></script>
+   <!--Link para poder abrir la biblioteca A-Frame Extras-->
+   <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script>
+   <!--Link para poder abrir el sistema de física CANNON-->
+   <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.min.js"></script>
+   <!--Link para poder abrir Ammo-->
+   <script src="https://cdn.jsdelivr.net/gh/MozillaReality/ammo.js@8bbc0ea/builds/ammo.wasm.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <!--Componentes del Entorno/Ambiente de la galería-->
+        <a-sky atmosphere="color:#f2f7ff"></a-sky>
+        <a-entity environment="preset: forest; dressingAmount: 25"></a-entity>
+        
+        <!--Malla-->
+        <!-- <a-entity nav-mesh
+        normal-material
+        visible="false"
+        position="3.730 0.040 -34.986" scale="4.600 1.000 4.600"
+        gltf-model="#navmesh"></a-entity> -->
+
+        <!--Malla de movibilidad-->
+        <!-- <a-assets>
+        <a-asset-item id="navmesh" src="assets/blender/malla2.glb"></a-asset-item>
+        </a-assets> -->
+
+        <!--Movilidad a través del Laberinto-->
+        <a-entity id="rig" movement-controls="constrainToNavMesh: true;controls: checkpoint, gamepad, trackpad, keyboard, nipple;" 
+        position="0 0.5 6">
+        <a-entity id="camera"
+            camera
+            position="0 3.6 0"
+            look-controls="pointerLockEnabled: true"></a-entity>
+        </a-entity>
+        
+        <!--Textos de la galería-->
+
+            <!--Título-->
+
+                <!--Entrada-->
+                <!-- <a-entity 
+                text="color: black; font: assets/fonts/abcorregido-msdf/abcorregido-msdf.json; fontImage: assets/fonts/abcorregido-msdf/abcorregido.png; letterSpacing: 4; negate: false; value: T A L L E R  DE  J U N K J O U R N A L" scale="6.495 8.759 2.398" position="0.738 6.82844 3.5793">
+                </a-entity> -->
+
+         <!--Collages del taller-->
+            <!-- <a-assets>
+                <img id="claude" src="assets/images/autores/claude_cahun.jpeg">
+            </a-assets> -->
+
+            <!--Collages papitazzz-->
+            <!-- <a-box src="assets/images/autores/damian_ortega.jpg" scale="2.5 4 0.25" position="-12.31343 3.78527 -8.896" rotation="0 90 0"></a-box>-->
+
+            <!--Collages latazzz-->
+            <!--<a-box src="assets/images/piezas/Mascaras.jpg" scale="7.000 6.000 0.250" position="-32.512 3.646 -24.402" rotation="0 90.000 0"></a-box>-->   
+         
+        <!--Estrutura de la galería-->
+            <!-- <a-assets>
+                <img id="valla" src="assets/images/paredesTexturas/valla.png">
+            </a-assets> -->
+
+            <!--Paredes (x, y, z; izquierda-derecha, arriba-abajo, adelante-atrás; rojo, verde, azul)-->
+
+                <!-- ARRIBA -->
+                 <!-- ESQUINA IZQUIERDA -->
+                    <a-box position="-59.71752 1.7304 -25.85251" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-59.20553 1.7304 -26.29736" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-58.70364 1.7304 -26.73304" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-58.21095 1.7304 -27.16085" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-57.71399 1.7304 -27.58968" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-57.21987 1.7304 -28.01774" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-56.72223 1.7304 -28.44941" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-56.22723 1.7304 -28.87931" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-55.69114 1.7304 -29.34341" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-55.17705 1.7304 -29.7881" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-54.67261 1.7304 -30.22564" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-54.15808 1.7304 -30.66923" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-53.65299 1.7304 -31.10946" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-53.13098 1.7304 -31.56201" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-52.63592 1.7304 -31.99224" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-52.15471 1.7304 -32.41018" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-55.70993 2.26624 -28.81994" rotation="0 -139.0832129368268 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-55.70993 1.20636 -28.81994" rotation="0 -139.0832129368268 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+
+                <!-- ESQUINA DERECHA -->
+                    <a-box position="59.71752 1.7304 -25.85251" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="59.20553 1.7304 -26.29736" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="58.70364 1.7304 -26.73304" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="58.21095 1.7304 -27.16085" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="57.71399 1.7304 -27.58968" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="57.21987 1.7304 -28.01774" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="56.72223 1.7304 -28.44941" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="56.22723 1.7304 -28.87931" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="55.69114 1.7304 -29.34341" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="55.17705 1.7304 -29.7881" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="54.67261 1.7304 -30.22564" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="54.15808 1.7304 -30.66923" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="53.65299 1.7304 -31.10946" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="53.13098 1.7304 -31.56201" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="52.63592 1.7304 -31.99224" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="52.15471 1.7304 -32.41018" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="55.70993 2.26624 -28.81994" rotation="0 139.0832129368268 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="55.70993 1.20636 -28.81994" rotation="0 139.0832129368268 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+
+                <!-- CENTRO -->
+                    <a-box position="-5.06628 1.7304 -47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-4.39376 1.7304 -47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-3.73619 1.7304 -47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-3.06368 1.7304 -47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-2.37622 1.7304 -47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-1.67381 1.7304 -47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-1.0013 1.7304 -47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-0.32878 1.7304 -47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="0.34372 1.7304 -47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="1.03119 1.7304 -47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="1.7037 1.7304 -47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="2.39116 1.7304 -47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="3.06368 1.7304 -47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="3.75114 1.7304 -47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="4.40871 1.7304 -47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="5.1111 1.7304 -47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="0 2.26624 -46.91717" rotation="0 -180 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="0 1.20636 -46.91717" rotation="0 -180 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+
+                <!-- DIAGONAL DERECHA -->
+                    <a-box position="26.27082 1.7304 -45.09333" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="26.9263 1.7304 -44.8941" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="27.5859 1.7304 -44.68414" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="28.24967 1.7304 -44.48303" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="28.91508 1.7304 -44.27906" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="29.56852 1.7304 -44.07511" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="30.22795 1.7304 -43.87713" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="30.88139 1.7304 -43.67917" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="31.53481 1.7304 -43.4752" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="32.19423 1.7304 -43.27123" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="32.85366 1.7304 -43.06727" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="33.50708 1.7304 -42.86931" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="34.14852 1.7304 -42.67134" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="34.79598 1.7304 -42.47338" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="35.4374 1.7304 -42.27541" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="36.08484 1.7304 -42.07744" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="31.02882 2.26624 -43.21259" rotation="0 162.9337270747376 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="31.02882 1.20636 -43.21259" rotation="0 162.9337270747376 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+                
+                <!-- DIAGONAL IZQUIERDA -->
+                    <a-box position="-26.27082 1.7304 -45.09333" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-26.9263 1.7304 -44.8941" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-27.5859 1.7304 -44.68414" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-28.24967 1.7304 -44.48303" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-28.91508 1.7304 -44.27906" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-29.56852 1.7304 -44.07511" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-30.22795 1.7304 -43.87713" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-30.88139 1.7304 -43.67917" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-31.53481 1.7304 -43.4752" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-32.19423 1.7304 -43.27123" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-32.85366 1.7304 -43.06727" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-33.50708 1.7304 -42.86931" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-34.14852 1.7304 -42.67134" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-34.79598 1.7304 -42.47338" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-35.4374 1.7304 -42.27541" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-36.08484 1.7304 -42.07744" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-31.02882 2.26624 -43.21259" rotation="0 -162.9337270747376 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-31.02882 1.20636 -43.21259" rotation="0 -162.9337270747376 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+
+            <!-- ABAJO -->
+                 <!-- ESQUINA IZQUIERDA -->
+                    <a-box position="-59.71752 1.7304 25.85251" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-59.20553 1.7304 26.29736" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-58.70364 1.7304 26.73304" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-58.21095 1.7304 27.16085" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-57.71399 1.7304 27.58968" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-57.21987 1.7304 28.01774" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-56.72223 1.7304 28.44941" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-56.22723 1.7304 28.87931" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-55.69114 1.7304 29.34341" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-55.17705 1.7304 29.7881" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-54.67261 1.7304 30.22564" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-54.15808 1.7304 30.66923" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-53.65299 1.7304 31.10946" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-53.13098 1.7304 31.56201" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-52.63592 1.7304 31.99224" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-52.15471 1.7304 32.41018" rotation="0 139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-55.70993 2.26624 28.81994" rotation="0 139.0832129368268 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-55.70993 1.20636 28.81994" rotation="0 139.0832129368268 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+
+                <!-- ESQUINA DERECHA -->
+                    <a-box position="59.71752 1.7304 25.85251" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="59.20553 1.7304 26.29736" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="58.70364 1.7304 26.73304" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="58.21095 1.7304 27.16085" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="57.71399 1.7304 27.58968" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="57.21987 1.7304 28.01774" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="56.72223 1.7304 28.44941" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="56.22723 1.7304 28.87931" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="55.69114 1.7304 29.34341" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="55.17705 1.7304 29.7881" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="54.67261 1.7304 30.22564" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="54.15808 1.7304 30.66923" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="53.65299 1.7304 31.10946" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="53.13098 1.7304 31.56201" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="52.63592 1.7304 31.99224" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="52.15471 1.7304 32.41018" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="55.70993 2.26624 28.81994" rotation="0 -139.0832129368268 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="55.70993 1.20636 28.81994" rotation="0 -139.0832129368268 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+
+                <!-- CENTRO -->
+                    <a-box position="-5.06628 1.7304 47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-4.39376 1.7304 47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-3.73619 1.7304 47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-3.06368 1.7304 47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-2.37622 1.7304 47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-1.67381 1.7304 47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-1.0013 1.7304 47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-0.32878 1.7304 47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="0.34372 1.7304 47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="1.03119 1.7304 47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="1.7037 1.7304 47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="2.39116 1.7304 47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="3.06368 1.7304 47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="3.75114 1.7304 47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="4.40871 1.7304 47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="5.1111 1.7304 47.32024" rotation="0 -180 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="0 2.26624 46.91717" rotation="0 -180 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="0 1.20636 46.91717" rotation="0 -180 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+
+                <!-- DIAGONAL DERECHA -->
+                    <a-box position="26.27082 1.7304 45.09333" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="26.9263 1.7304 44.8941" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="27.5859 1.7304 44.68414" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="28.24967 1.7304 44.48303" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="28.91508 1.7304 44.27906" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="29.56852 1.7304 44.07511" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="30.22795 1.7304 43.87713" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="30.88139 1.7304 43.67917" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="31.53481 1.7304 43.4752" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="32.19423 1.7304 43.27123" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="32.85366 1.7304 43.06727" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="33.50708 1.7304 42.86931" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="34.14852 1.7304 42.67134" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="34.79598 1.7304 42.47338" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="35.4374 1.7304 42.27541" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="36.08484 1.7304 42.07744" rotation="0 -162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="31.02882 2.26624 43.21259" rotation="0 -162.9337270747376 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="31.02882 1.20636 43.21259" rotation="0 -162.9337270747376 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+                
+                <!-- DIAGONAL IZQUIERDA -->
+                    <a-box position="-26.27082 1.7304 45.09333" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-26.9263 1.7304 44.8941" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-27.5859 1.7304 44.68414" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-28.24967 1.7304 44.48303" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-28.91508 1.7304 44.27906" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-29.56852 1.7304 44.07511" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-30.22795 1.7304 43.87713" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-30.88139 1.7304 43.67917" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-31.53481 1.7304 43.4752" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-32.19423 1.7304 43.27123" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-32.85366 1.7304 43.06727" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-33.50708 1.7304 42.86931" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-34.14852 1.7304 42.67134" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-34.79598 1.7304 42.47338" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-35.4374 1.7304 42.27541" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-36.08484 1.7304 42.07744" rotation="0 162.9337270747376 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-31.02882 2.26624 43.21259" rotation="0 162.9337270747376 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+                    <a-box position="-31.02882 1.20636 43.21259" rotation="0 162.9337270747376 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+
+                <!-- LATERAL IZQUIERDO -->
+                    <!-- CENTRO -->
+                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="59.987 2.26624 0" rotation="0 -90 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="59.987 1.20636 0" rotation="0 -90 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+
+                <!-- LATERAL DERECHO -->
+                    <!-- CENTRO -->
+                        <!-- <a-box position="-5.06628 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-4.39376 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-3.73619 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-3.06368 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-2.37622 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-1.67381 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-1.0013 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-0.32878 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="0.34372 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="1.03119 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="1.7037 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="2.39116 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="3.06368 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="3.75114 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="4.40871 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="5.1111 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="0 2.26624 -46.91717" rotation="0 90 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="0 1.20636 -46.91717" rotation="0 90 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box> -->
+
+            <!--Esquinas (FAROLES/LUMANIRAS/POSTES DE LUZ)-->
+
+                <!-- <a-assets>
+                    <a-asset-item id="papitazzz-obj" src="assets/objModels/bolsaDePapitazzz.obj"></a-asset-item>
+                    <a-asset-item id="papitazzz-mtl" src="assets/objModels/bolsaDePapitazzz.mtl"></a-asset-item>
+                    <a-asset-item id="lata-obj" src="assets/objModels/lata.obj"></a-asset-item>
+                    <a-asset-item id="lata-mtl" src="assets/objModels/lata.mtl"></a-asset-item>
+                </a-assets> -->
+                <!--EXTERNAS-->
+                <!-- <a-cylinder color="#454545" height="3" radius="1.5" position="-4.35345 3.77277 -3.23554" scale="0.38967 2.68421 0.38926"></a-cylinder> -->
+    
+                <!--INTERNAS CONVERGENTES-->
+                <!-- <a-cylinder color="#454545" height="3" radius="1.5" position="0.30276 3.30964 -7.27798" scale="0.18 2.684 0.18"></a-cylinder> -->
+                
+                <!--INTERNAS DIVERGENTES-->
+                <!-- <a-cylinder color="#454545" height="3" radius="1.5" position="-3.839 3.31 -10.57" scale="0.21 2.684 0.21"></a-cylinder> -->
+                
+            <!--Letreros-->
+
+                <!--ENTRADAS-->
+                <!-- <a-box static-body="sphereRadius: NaN" position="-0.13896 6.77189 3.23161" rotation="0 -180 0" color="#e3aaaa" scale="10.1034 1.64559 0.6" velocity=""></a-box> -->
+                
+            <!--MODELOS 3D-->
+                <a-assets>
+                    <a-asset-item id="papitazzz-obj" src="assets/objModels/bolsaDePapitazzz.obj"></a-asset-item>
+                    <a-asset-item id="papitazzz-mtl" src="assets/objModels/bolsaDePapitazzz.mtl"></a-asset-item>
+                    <a-asset-item id="lata-obj" src="assets/objModels/lata.obj"></a-asset-item>
+                    <a-asset-item id="lata-mtl" src="assets/objModels/lata.mtl"></a-asset-item>
+                </a-assets>
+
+                <!--Dentro del jardín-->
+
+                    <!--PAPITAZZZ-->
+                    <a-entity obj-model="mtl: assets/objModels/bolsaDePapitazzz.mtl; obj: assets/objModels/bolsaDePapitazzz.obj" position="-32.67585 4.56935 -5.29232" visible="" rotation="0 -91.09455984784961 0" scale="3.555 2.488 2.201"></a-entity>
+                    <a-entity obj-model="mtl: assets/objModels/lata.mtl; obj: assets/objModels/lata.obj" position="-32.67585 4.56935 -5.29232" visible="" rotation="0 -91.09455984784961 0" scale="3.555 2.488 3.555"></a-entity>
+                    <a-entity obj-model="mtl: assets/objModels/bolsaDePapitazzz.mtl; obj: assets/objModels/bolsaDePapitazzz.obj" position="-25.894 4.569 -5.292" visible="" rotation="0 -91.09455984784961 0" scale="3.555 2.488 2.201"></a-entity>
+                    <a-entity obj-model="mtl: assets/objModels/lata.mtl; obj: assets/objModels/lata.obj" position="-32.676 4.569 2.821" visible="" rotation="0 -91.09455984784961 0" scale="3.555 2.488 3.555"></a-entity>
+                    
+                        <!--Cadena-->
+                        <!-- <a-entity geometry="primitive: torus; radius: 2; radiusTubular: 0.5" material="side: double; color: #9b9b9b" position="-25.58882 5.371 -75.42979" scale="0.042 0.04 0.029" rotation="0 180 0"></a-entity>
+                        <a-entity geometry="primitive: torus; radius: 2; radiusTubular: 0.5" material="side: double; color: #9b9b9b" position="-25.58882 5.498 -75.42979" scale="0.042 0.04 0.029" rotation="0 90 0"></a-entity>
+                        <a-entity geometry="primitive: torus; radius: 2; radiusTubular: 0.5" material="side: double; color: #9b9b9b" position="-25.58882 5.644 -75.42979" scale="0.042 0.04 0.029" rotation="0 180 0"></a-entity>
+                        <a-entity geometry="primitive: torus; radius: 2; radiusTubular: 0.5" material="side: double; color: #9b9b9b" position="-25.58882 5.771 -75.42979" scale="0.042 0.04 0.029" rotation="0 90 0"></a-entity>
+                        <a-entity geometry="primitive: torus; radius: 2; radiusTubular: 0.5" material="side: double; color: #9b9b9b" position="-25.58882 5.877 -75.42979" scale="0.042 0.04 0.029" rotation="0 180 0"></a-entity> -->
+
+    </a-scene>
+</body>
+</html>
