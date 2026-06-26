@@ -20,7 +20,7 @@
     <a-scene>
         <!--Componentes del Entorno/Ambiente de la galería-->
         <a-sky atmosphere="color:#f2f7ff"></a-sky>
-        <a-entity environment="preset: forest; dressingAmount: 25"></a-entity>
+        <a-entity environment="preset: forest; dressingAmount: 50" position="-13.79448 0 0"></a-entity>
         
         <!--Malla-->
         <!-- <a-entity nav-mesh
@@ -36,7 +36,7 @@
 
         <!--Movilidad a través del Laberinto-->
         <a-entity id="rig" movement-controls="constrainToNavMesh: true;controls: checkpoint, gamepad, trackpad, keyboard, nipple;" 
-        position="0 0.5 6">
+        position="0 0 0">
         <a-entity id="camera"
             camera
             position="0 3.6 0"
@@ -64,12 +64,8 @@
             <!--<a-box src="assets/images/piezas/Mascaras.jpg" scale="7.000 6.000 0.250" position="-32.512 3.646 -24.402" rotation="0 90.000 0"></a-box>-->   
          
         <!--Estrutura de la galería-->
-            <!-- <a-assets>
-                <img id="valla" src="assets/images/paredesTexturas/valla.png">
-            </a-assets> -->
 
             <!--Paredes (x, y, z; izquierda-derecha, arriba-abajo, adelante-atrás; rojo, verde, azul)-->
-
                 <!-- ARRIBA -->
                  <!-- ESQUINA IZQUIERDA -->
                     <a-box position="-59.71752 1.7304 -25.85251" rotation="0 -139.0832129368268 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
@@ -274,72 +270,180 @@
 
                 <!-- LATERAL IZQUIERDO -->
                     <!-- CENTRO -->
-                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="47.32024 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="59.987 2.26624 0" rotation="0 -90 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="59.987 1.20636 0" rotation="0 -90 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="70.39823 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="70.39823 1.7304 -4.38862" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="70.39823 1.7304 -3.70221" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="70.39823 1.7304 -3.02742" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="70.39823 1.7304 -2.36743" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="70.39823 1.7304 -1.70436" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="70.39823 1.7304 -1.0228" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="70.39823 1.7304 -0.35662" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="70.39823 1.7304 0.32537" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="70.39823 1.7304 0.99975" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="70.39823 1.7304 1.68991" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="70.39823 1.7304 2.37384" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="70.39823 1.7304 3.065" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="70.39823 1.7304 3.75218" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="70.39823 1.7304 4.43294" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="70.39823 1.7304 5.12006" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="69.987 2.26624 0.02502" rotation="0 -90 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="69.987 1.20636 0.02502" rotation="0 -90 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
 
                 <!-- LATERAL DERECHO -->
                     <!-- CENTRO -->
-                        <!-- <a-box position="-5.06628 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="-4.39376 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="-3.73619 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="-3.06368 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="-2.37622 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="-1.67381 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="-1.0013 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="-0.32878 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="0.34372 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="1.03119 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="1.7037 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="2.39116 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="3.06368 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="3.75114 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="4.40871 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="5.1111 1.7304 -47.32024" rotation="0 90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="0 2.26624 -46.91717" rotation="0 90 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
-                        <a-box position="0 1.20636 -46.91717" rotation="0 90 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box> -->
+                        <a-box position="-70.39823 1.7304 -5.06628" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-70.39823 1.7304 -4.38862" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-70.39823 1.7304 -3.70221" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-70.39823 1.7304 -3.02742" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-70.39823 1.7304 -2.36743" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-70.39823 1.7304 -1.70436" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-70.39823 1.7304 -1.0228" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-70.39823 1.7304 -0.35662" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-70.39823 1.7304 0.32537" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-70.39823 1.7304 0.99975" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-70.39823 1.7304 1.68991" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-70.39823 1.7304 2.37384" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-70.39823 1.7304 3.065" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-70.39823 1.7304 3.75218" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-70.39823 1.7304 4.43294" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-70.39823 1.7304 5.12006" rotation="0 -90 0" scale="0.49995 2.76591 0.6" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-69.987 2.26624 0.02502" rotation="0 -90 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
+                        <a-box position="-69.987 1.20636 0.02502" rotation="0 -90 0" scale="11.13246 0.43788 0.22273" velocity="" material="color: #6B2C00"></a-box>
 
             <!--Esquinas (FAROLES/LUMANIRAS/POSTES DE LUZ)-->
 
-                <!-- <a-assets>
-                    <a-asset-item id="papitazzz-obj" src="assets/objModels/bolsaDePapitazzz.obj"></a-asset-item>
-                    <a-asset-item id="papitazzz-mtl" src="assets/objModels/bolsaDePapitazzz.mtl"></a-asset-item>
-                    <a-asset-item id="lata-obj" src="assets/objModels/lata.obj"></a-asset-item>
-                    <a-asset-item id="lata-mtl" src="assets/objModels/lata.mtl"></a-asset-item>
-                </a-assets> -->
-                <!--EXTERNAS-->
-                <!-- <a-cylinder color="#454545" height="3" radius="1.5" position="-4.35345 3.77277 -3.23554" scale="0.38967 2.68421 0.38926"></a-cylinder> -->
+                <!--EXTERNAS (x, y, z; izquierda-derecha, arriba-abajo, adelante-atrás; rojo, verde, azul)-->
+                
     
-                <!--INTERNAS CONVERGENTES-->
-                <!-- <a-cylinder color="#454545" height="3" radius="1.5" position="0.30276 3.30964 -7.27798" scale="0.18 2.684 0.18"></a-cylinder> -->
-                
-                <!--INTERNAS DIVERGENTES-->
-                <!-- <a-cylinder color="#454545" height="3" radius="1.5" position="-3.839 3.31 -10.57" scale="0.21 2.684 0.21"></a-cylinder> -->
-                
-            <!--Letreros-->
+                <!--INTERNAS (x, y, z; izquierda-derecha, arriba-abajo, adelante-atrás; rojo, verde, azul) -->
+                    <a-cylinder color="#700000" height="3" radius="1.5" position="-14.7314 5.27797 -14.73051" scale="0.18 3.18124 0.18"></a-cylinder>
+                    <a-box color="#700000" height="3" width="3" depth="3" position="-14.7314 0.12214 -14.73051" scale="0.34543 0.09853 0.34543"></a-box>
+                    <a-box color="#700000" height="3" width="3" depth="3" position="-14.7314 0.39174 -14.73051" scale="0.2413 0.09853 0.2413"></a-box>
+                    <!-- <a-cylinder color="#700000" height="3" radius="1.5" position="-14.72299 10.073 -14.73051" scale="0.18 0.790 0.18" rotation="0 0 90"></a-cylinder>
+                    <a-cylinder color="#700000" height="3" radius="1.5" position="-14.72299 10.073 -14.73051" scale="0.18 0.790 0.18" rotation="90 0 0"></a-cylinder> -->
+                    <a-sphere color="yellow" radius="0.5" position="-14.72299 10.073 -14.73051"></a-sphere>
+                    <a-torus color="#700000" arc="360" radius="7" radius-tubular="1" position="-14.72299 9.65462 -14.73051" scale="0.05 0.05 0.05" rotation="-90 0 0"></a-torus>
+                    <a-torus color="#700000" arc="360" radius="5" radius-tubular="1" position="-14.72299 9.5063 -14.73051" scale="0.05 0.05 0.05" rotation="-90 0 0"></a-torus>
 
-                <!--ENTRADAS-->
-                <!-- <a-box static-body="sphereRadius: NaN" position="-0.13896 6.77189 3.23161" rotation="0 -180 0" color="#e3aaaa" scale="10.1034 1.64559 0.6" velocity=""></a-box> -->
-                
+                    <a-cylinder color="#700000" height="3" radius="1.5" position="-14.7314 5.27797 14.73051" scale="0.18 3.18124 0.18"></a-cylinder>
+                    <a-box color="#700000" height="3" width="3" depth="3" position="-14.7314 0.12214 14.73051" scale="0.34543 0.09853 0.34543"></a-box>
+                    <a-box color="#700000" height="3" width="3" depth="3" position="-14.7314 0.39174 14.73051" scale="0.2413 0.09853 0.2413"></a-box>
+                    <a-sphere color="yellow" radius="0.5" position="-14.7314 10.073 14.73051"></a-sphere>
+                    <a-torus color="#700000" arc="360" radius="7" radius-tubular="1" position="-14.7314 9.65462 14.73051" scale="0.05 0.05 0.05" rotation="-90 0 0"></a-torus>
+                    <a-torus color="#700000" arc="360" radius="5" radius-tubular="1" position="-14.7314 9.5063 14.73051" scale="0.05 0.05 0.05" rotation="-90 0 0"></a-torus>
+
+                    <a-cylinder color="#700000" height="3" radius="1.5" position="14.7314 5.27797 -14.73051" scale="0.18 3.18124 0.18"></a-cylinder>
+                    <a-box color="#700000" height="3" width="3" depth="3" position="14.7314 0.12214 -14.73051" scale="0.34543 0.09853 0.34543"></a-box>
+                    <a-box color="#700000" height="3" width="3" depth="3" position="14.7314 0.39174 -14.73051" scale="0.2413 0.09853 0.2413"></a-box>
+                    <a-sphere color="yellow" radius="0.5" position="14.7314 10.073 -14.73051"></a-sphere>
+                    <a-torus color="#700000" arc="360" radius="7" radius-tubular="1" position="14.7314 9.65462 -14.73051" scale="0.05 0.05 0.05" rotation="-90 0 0"></a-torus>
+                    <a-torus color="#700000" arc="360" radius="5" radius-tubular="1" position="14.7314 9.5063 -14.73051" scale="0.05 0.05 0.05" rotation="-90 0 0"></a-torus>
+
+                    <a-cylinder color="#700000" height="3" radius="1.5" position="14.7314 5.27797 14.73051" scale="0.18 3.18124 0.18"></a-cylinder>
+                    <a-box color="#700000" height="3" width="3" depth="3" position="14.7314 0.12214 14.73051" scale="0.34543 0.09853 0.34543"></a-box>
+                    <a-box color="#700000" height="3" width="3" depth="3" position="14.7314 0.39174 14.73051" scale="0.2413 0.09853 0.2413"></a-box>
+                    <a-sphere color="yellow" radius="0.5" position="14.7314 10.073 14.73051"></a-sphere>
+                    <a-torus color="#700000" arc="360" radius="7" radius-tubular="1" position="14.7314 9.65462 14.73051" scale="0.05 0.05 0.05" rotation="-90 0 0"></a-torus>
+                    <a-torus color="#700000" arc="360" radius="5" radius-tubular="1" position="14.7314 9.5063 14.73051" scale="0.05 0.05 0.05" rotation="-90 0 0"></a-torus>
+
+            <!--HONGOS -->
+
+                <!-- GRANDES -->
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="-42.02564 5.99761 0" scale="2 2 2" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="-42.02564 11.54772 0" scale="3.18382 0.31273 3.02154" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-sphere material="color: #ff0000" radius="3" position="-42.02564 11.12923 0" geometry="radius: 5; phiLength: 180; segmentsHeight: 36" rotation="-90 0 0"></a-sphere>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="-42.02564 11.12923 0" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 86"></a-torus>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="-42.02564 11.12923 0" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 76"></a-torus>
+
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="42.02564 5.99761 0" scale="2 2 2" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="42.02564 11.54772 0" scale="3.18382 0.31273 3.02154" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-sphere material="color: #ff0000" radius="3" position="42.02564 11.12923 0" geometry="radius: 5; phiLength: 180; segmentsHeight: 36" rotation="-90 0 0"></a-sphere>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="42.02564 11.12923 0" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 86"></a-torus>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="42.02564 11.12923 0" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 76"></a-torus>
+                    
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="0 5.99761 42.02564" scale="2 2 2" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="0 11.54772 42.02564" scale="3.18382 0.31273 3.02154" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-sphere material="color: #ff0000" radius="3" position="0 11.12923 42.02564" geometry="radius: 5; phiLength: 180; segmentsHeight: 36" rotation="-90 0 0"></a-sphere>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="0 11.12923 42.02564" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 86"></a-torus>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="0 11.12923 42.02564" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 76"></a-torus>
+
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="0 5.99761 -42.02564" scale="2 2 2" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="0 11.54772 -42.02564" scale="3.18382 0.31273 3.02154" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-sphere material="color: #ff0000" radius="3" position="0 11.12923 -42.02564" geometry="radius: 5; phiLength: 180; segmentsHeight: 36" rotation="-90 0 0"></a-sphere>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="0 11.12923 -42.02564" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 86"></a-torus>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="0 11.12923 -42.02564" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 76"></a-torus>
+
+                <!-- PEQUEÑOS -->
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="7.37322 2.16223 -36.88331" scale="2 0.71968 2" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="7.37322 3.01404 -36.88331" scale="2.22777 0.21024 2.32495" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-sphere material="color: #ff0000" radius="3" position="7.37673 2.80004 -36.94028" geometry="radius: 4; phiLength: 180; segmentsHeight: 36" rotation="-90 0 0"></a-sphere>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="7.37673 2.80004 -36.94028" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 66"></a-torus>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="7.37673 2.80004 -36.94028" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 56"></a-torus>
+
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="-7.37322 2.16223 36.88331" scale="2 0.71968 2" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="-7.37322 3.01404 36.88331" scale="2.22777 0.21024 2.32495" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-sphere material="color: #ff0000" radius="3" position="-7.37673 2.80004 36.94028" geometry="radius: 4; phiLength: 180; segmentsHeight: 36" rotation="-90 0 0"></a-sphere>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="-7.37673 2.80004 36.94028" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 66"></a-torus>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="-7.37673 2.80004 36.94028" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 56"></a-torus>
+
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="36.88331 2.16223 -7.37322" scale="2 0.71968 2" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="36.88331 3.01404 -7.37322" scale="2.22777 0.21024 2.32495" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-sphere material="color: #ff0000" radius="3" position="36.88331 2.80004 -7.37322" geometry="radius: 4; phiLength: 180; segmentsHeight: 36" rotation="-90 0 0"></a-sphere>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="36.88331 2.80004 -7.37322" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 66"></a-torus>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="36.88331 2.80004 -7.37322" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 56"></a-torus>
+
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="-36.88331 2.16223 7.37322" scale="2 0.71968 2" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="-36.88331 3.01404 7.37322" scale="2.22777 0.21024 2.32495" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-sphere material="color: #ff0000" radius="3" position="-36.88331 2.80004 7.37322" geometry="radius: 4; phiLength: 180; segmentsHeight: 36" rotation="-90 0 0"></a-sphere>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="-36.88331 2.80004 7.37322" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 66"></a-torus>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="-36.88331 2.80004 7.37322" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 56"></a-torus>
+
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="14.5251 2.16223 31.99521" scale="2 0.71968 2" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="14.5251 2.16223 31.99521" scale="2.22777 0.21024 2.32495" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-sphere material="color: #ff0000" radius="3" position="14.61881 2.80004 32.04924" geometry="radius: 4; phiLength: 180; segmentsHeight: 36" rotation="-90 0 0"></a-sphere>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="14.61881 2.80004 32.04924" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 66"></a-torus>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="14.61881 2.80004 32.04924" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 56"></a-torus>
+
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="-14.5251 2.16223 -31.99521" scale="2 0.71968 2" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="-14.5251 2.16223 -31.99521" scale="2.22777 0.21024 2.32495" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-sphere material="color: #ff0000" radius="3" position="-14.61881 2.80004 -32.04924" geometry="radius: 4; phiLength: 180; segmentsHeight: 36" rotation="-90 0 0"></a-sphere>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="-14.61881 2.80004 -32.04924" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 66"></a-torus>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="-14.61881 2.80004 -32.04924" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 56"></a-torus>
+
+                <!-- MEDIANOS -->
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="-26.27006 2.63679 23.70201" scale="2 0.90336 2" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="-26.27006 5.67251 23.70201" scale="2.71678 0.19553 2.86799" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-sphere material="color: #ff0000" radius="3" position="-26.27006 5.63891 23.70158" geometry="radius: 4.5; phiLength: 180; segmentsHeight: 36" rotation="-90 0 0"></a-sphere>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="-26.27006 5.64285 23.70158" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 76"></a-torus>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="-26.27006 5.64285 23.70158" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 66"></a-torus>
+
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="26.27006 2.63679 -23.70201" scale="2 0.90336 2" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="26.27006 5.67251 -23.70201" scale="2.71678 0.19553 2.86799" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-sphere material="color: #ff0000" radius="3" position="26.27006 5.63891 -23.70158" geometry="radius: 4.5; phiLength: 180; segmentsHeight: 36" rotation="-90 0 0"></a-sphere>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="26.27006 5.64285 -23.70158" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 76"></a-torus>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="26.27006 5.64285 -23.70158" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 66"></a-torus>
+
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="-26.27006 2.63679 -23.70201" scale="2 0.90336 2" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="-26.27006 5.67251 -23.70201" scale="2.71678 0.19553 2.86799" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-sphere material="color: #ff0000" radius="3" position="-26.27006 5.63891 -23.70158" geometry="radius: 4.5; phiLength: 180; segmentsHeight: 36" rotation="-90 0 0"></a-sphere>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="-26.27006 5.64285 -23.70158" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 76"></a-torus>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="-26.27006 5.64285 -23.70158" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 66"></a-torus>
+                    
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="26.27006 2.63679 23.70201" scale="2 0.90336 2" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-cylinder color="#FFF8E5" height="5" radius="5" position="26.27006 5.67251 23.70201" scale="2.71678 0.19553 2.86799" geometry="height: 6; radius: 1"></a-cylinder>
+                    <a-sphere material="color: #ff0000" radius="3" position="26.27006 5.63891 23.70158" geometry="radius: 4.5; phiLength: 180; segmentsHeight: 36" rotation="-90 0 0"></a-sphere>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="26.27006 5.64285 23.70158" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 76"></a-torus>
+                    <a-torus material="color: #ff0000" color="#700000" arc="360" radius="70" radius-tubular="7" position="26.27006 5.64285 23.70158" scale="0.05 0.05 0.05" rotation="-90 0 0" geometry="radius: 66"></a-torus>
+
+
             <!--MODELOS 3D-->
                 <a-assets>
+
+                    <!--PAPITAZZZ-->
                     <a-asset-item id="papitazzz-obj" src="assets/objModels/bolsaDePapitazzz.obj"></a-asset-item>
                     <a-asset-item id="papitazzz-mtl" src="assets/objModels/bolsaDePapitazzz.mtl"></a-asset-item>
+
+                    <!-- LATAZZZ -->
                     <a-asset-item id="lata-obj" src="assets/objModels/lata.obj"></a-asset-item>
                     <a-asset-item id="lata-mtl" src="assets/objModels/lata.mtl"></a-asset-item>
                 </a-assets>
@@ -347,17 +451,27 @@
                 <!--Dentro del jardín-->
 
                     <!--PAPITAZZZ-->
-                    <a-entity obj-model="mtl: assets/objModels/bolsaDePapitazzz.mtl; obj: assets/objModels/bolsaDePapitazzz.obj" position="-32.67585 4.56935 -5.29232" visible="" rotation="0 -91.09455984784961 0" scale="3.555 2.488 2.201"></a-entity>
-                    <a-entity obj-model="mtl: assets/objModels/lata.mtl; obj: assets/objModels/lata.obj" position="-32.67585 4.56935 -5.29232" visible="" rotation="0 -91.09455984784961 0" scale="3.555 2.488 3.555"></a-entity>
-                    <a-entity obj-model="mtl: assets/objModels/bolsaDePapitazzz.mtl; obj: assets/objModels/bolsaDePapitazzz.obj" position="-25.894 4.569 -5.292" visible="" rotation="0 -91.09455984784961 0" scale="3.555 2.488 2.201"></a-entity>
-                    <a-entity obj-model="mtl: assets/objModels/lata.mtl; obj: assets/objModels/lata.obj" position="-32.676 4.569 2.821" visible="" rotation="0 -91.09455984784961 0" scale="3.555 2.488 3.555"></a-entity>
-                    
+                    <a-entity obj-model="mtl: assets/objModels/bolsaDePapitazzz.mtl; obj: assets/objModels/bolsaDePapitazzz.obj" position="-10.63841 2.68101 -29.09307" rotation="-27.876688564295073 38.357232552828094 -0.6119189251997192" scale="2.26962 1.61732 2.201"></a-entity>
+                    <a-entity obj-model="mtl: assets/objModels/bolsaDePapitazzz.mtl; obj: assets/objModels/bolsaDePapitazzz.obj" position="40.50911 4.05524 3.13608" rotation="-12.89727996839483 -38.66720271999387 -3.5277011446204787" scale="3.19909 2.13164 2.201"></a-entity>
+                    <a-entity obj-model="mtl: assets/objModels/bolsaDePapitazzz.mtl; obj: assets/objModels/bolsaDePapitazzz.obj" position="23.64212 2.17979 -22.36546" rotation="-9.659495468110547 -60.757590511262755 -0.1650118449976771" scale="2.41294 1.24724 2.201"></a-entity>
+                    <a-entity obj-model="mtl: assets/objModels/bolsaDePapitazzz.mtl; obj: assets/objModels/bolsaDePapitazzz.obj" position="-20.94324 3.61411 24.10431" rotation="-7.810560663223382 84.6464928214473 -1.772731418134767" scale="3.19909 2.13164 2.201"></a-entity>
+                    <a-entity obj-model="mtl: assets/objModels/bolsaDePapitazzz.mtl; obj: assets/objModels/bolsaDePapitazzz.obj" position="2.93831 2.17979 41.12115" rotation="23.561743409164848 -44.88895141731948 2.326781606026273" scale="2.41294 1.24724 2.201"></a-entity>
+                    <a-entity obj-model="mtl: assets/objModels/bolsaDePapitazzz.mtl; obj: assets/objModels/bolsaDePapitazzz.obj" position="9.79211 4.05524 31.87425" rotation="-12.89727996839483 -88.56781597132266 -3.5277011446204787" scale="3.19909 2.13164 2.201"></a-entity>
+
+                    <!-- LATAZZZ -->
+                    <a-entity obj-model="mtl: assets/objModels/lata.mtl; obj: assets/objModels/lata.obj" position="-31.06622 -4.23855 15.10177" rotation="-76.09910843368567 10.63581555101347 13.630092988367153" scale="3.555 2.88354 3.555"></a-entity>
+                    <a-entity obj-model="mtl: assets/objModels/lata.mtl; obj: assets/objModels/lata.obj" position="23.12387 2.64018 23.81933" rotation="0 -91.09455984784961 0" scale="3.555 2.04938 3.555"></a-entity>
+                    <a-entity obj-model="mtl: assets/objModels/lata.mtl; obj: assets/objModels/lata.obj" position="20.86569 7.51729 -30.26867" rotation="62.685020534082845 -107.21701924503581 43.86965949978174" scale="3.555 2.04938 3.555"></a-entity>
+                    <a-entity obj-model="mtl: assets/objModels/lata.mtl; obj: assets/objModels/lata.obj" position="-7.27753 3.51491 -42.97948" rotation="-4.230147401450869 18.18739929083772 4.529231370509157" scale="3.555 2.88354 3.555"></a-entity>
+                    <a-entity obj-model="mtl: assets/objModels/lata.mtl; obj: assets/objModels/lata.obj" position="-18.25502 6.38525 32.67633" rotation="7.389436683802227 63.59143976597981 -6.078509248542904" scale="3.555 4.21448 3.555"></a-entity>
+                    <a-entity obj-model="mtl: assets/objModels/lata.mtl; obj: assets/objModels/lata.obj" position="29.9551 4.69865 -14.99405" rotation="6.081946995313689 64.49556716669625 10.060565924702125" scale="3.555 4.21448 3.555"></a-entity>
+                        
                         <!--Cadena-->
-                        <!-- <a-entity geometry="primitive: torus; radius: 2; radiusTubular: 0.5" material="side: double; color: #9b9b9b" position="-25.58882 5.371 -75.42979" scale="0.042 0.04 0.029" rotation="0 180 0"></a-entity>
-                        <a-entity geometry="primitive: torus; radius: 2; radiusTubular: 0.5" material="side: double; color: #9b9b9b" position="-25.58882 5.498 -75.42979" scale="0.042 0.04 0.029" rotation="0 90 0"></a-entity>
-                        <a-entity geometry="primitive: torus; radius: 2; radiusTubular: 0.5" material="side: double; color: #9b9b9b" position="-25.58882 5.644 -75.42979" scale="0.042 0.04 0.029" rotation="0 180 0"></a-entity>
-                        <a-entity geometry="primitive: torus; radius: 2; radiusTubular: 0.5" material="side: double; color: #9b9b9b" position="-25.58882 5.771 -75.42979" scale="0.042 0.04 0.029" rotation="0 90 0"></a-entity>
-                        <a-entity geometry="primitive: torus; radius: 2; radiusTubular: 0.5" material="side: double; color: #9b9b9b" position="-25.58882 5.877 -75.42979" scale="0.042 0.04 0.029" rotation="0 180 0"></a-entity> -->
+                            <!-- <a-entity geometry="primitive: torus; radius: 2; radiusTubular: 0.5" material="side: double; color: #9b9b9b" position="-25.58882 5.371 -75.42979" scale="0.042 0.04 0.029" rotation="0 180 0"></a-entity>
+                            <a-entity geometry="primitive: torus; radius: 2; radiusTubular: 0.5" material="side: double; color: #9b9b9b" position="-25.58882 5.498 -75.42979" scale="0.042 0.04 0.029" rotation="0 90 0"></a-entity>
+                            <a-entity geometry="primitive: torus; radius: 2; radiusTubular: 0.5" material="side: double; color: #9b9b9b" position="-25.58882 5.644 -75.42979" scale="0.042 0.04 0.029" rotation="0 180 0"></a-entity>
+                            <a-entity geometry="primitive: torus; radius: 2; radiusTubular: 0.5" material="side: double; color: #9b9b9b" position="-25.58882 5.771 -75.42979" scale="0.042 0.04 0.029" rotation="0 90 0"></a-entity>
+                            <a-entity geometry="primitive: torus; radius: 2; radiusTubular: 0.5" material="side: double; color: #9b9b9b" position="-25.58882 5.877 -75.42979" scale="0.042 0.04 0.029" rotation="0 180 0"></a-entity> -->
     </a-scene>
 </body>
 </html>
